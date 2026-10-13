@@ -10,7 +10,7 @@ void main() {
       //   providers: [
       //     BlocProvider(create: (_)=>CubitContro())
       //   ],
-      // child: const MyApp())
+      // child:  MyApp())
 
     MultiProvider(
         providers: [
@@ -52,14 +52,14 @@ class newprovider extends ChangeNotifier{
 
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+   MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Cubit Example'),
+          title:  Text('Cubit Example'),
         ),
         body: Center(
           child: Column(
@@ -73,7 +73,7 @@ class MyApp extends StatelessWidget {
                 builder: (context, count) {
                   return Text(
                     '$count',
-                    style: const TextStyle(fontSize: 40),
+                    style:  TextStyle(fontSize: 40),
                   );
                 },
               ),
@@ -84,7 +84,7 @@ class MyApp extends StatelessWidget {
           onPressed: () {
             context.read<CubitContro>().increement();
           },
-          child: const Icon(Icons.add),
+          child:  Icon(Icons.add),
         ),
       ),
     );
@@ -146,11 +146,11 @@ class Providerrrr extends StatelessWidget {
         body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text("${newpro.a.toString()}",style: const TextStyle(fontSize: 30),),
-              Text("${newpro.name.toString()}",style: const TextStyle(fontSize: 30),),
+              Text("${newpro.a.toString()}",style:  TextStyle(fontSize: 30),),
+              Text("${newpro.name.toString()}",style:  TextStyle(fontSize: 30),),
               InkWell(
                   onTap: (){newproread.changevalue();},
-                  child: const Text("+",style: TextStyle(fontSize: 30),)),
+                  child:  Text("+",style: TextStyle(fontSize: 30),)),
                InkWell(onTap: (){newproread.changename();},
                   child: Text("-",style: TextStyle(fontSize: 30),))
             ],
